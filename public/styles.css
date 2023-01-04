@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: #E9F2F7;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    color: #2c2c2c;
+}
+
+h1 {
+    color: #1E3D6E;
+    padding: 0 20px;
+}
+
+.login-page {
+    text-align: center;
+}
+
+.comments {
+    font-size: 14px;
+    padding: 0 20px;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px 30px 40px 30px;
+    border-radius: 10px;
+    margin-top: 40px;
+    background-color: #fff;
+}
+
+.login-form h3 {
+    font-size: 34px;
+    margin: 0;
+}
+
+.login-form input[type=text],
+.login-form input[type=password] {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #2c2c2c;
+    min-height: 57px;
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+.login-form label {
+    text-align: left;
+    width: 100%;
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 3px;
+    font-size: 18px;
+}
+
+.login-form button[type=submit] {
+    padding: 12px 15px;
+    background: #1e3d6e;
+    border: 0 none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 40px;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.5s;
+}
+
+.login-form button[type=submit]:hover {
+    background-color: #3B7DA9;
+}
+
+.error-msg div {
+    background: #ff4646;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/*** ACCUEIL ***/
+
+#top-bar {
+    background-color: #1e3d6e;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+#top-bar .account-infos {
+    margin-left: 40px;
+}
+
+#top-bar .btns-top {
+    display: flex;
+}
+
+#top-bar .btn-admin {
+    width: 300px;
+    height: 40px;
+    background-color: #44bb44;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    transition: background-color 0.5s ease;
+}
+
+#top-bar .btn-admin:hover {
+    background-color: #297e29;
+}
+
+#top-bar .btn-deco {
+    margin-right: 40px;
+    width: 160px;
+    height: 40px;
+    background-color: #ff4646;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 40px;
+    transition: background-color 0.5s ease;
+}
+
+#top-bar .btn-deco:hover {
+    background-color: #d73030;
+}
+
+#homepage,
+#page-404 {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#homepage h1 {
+    text-align: center;
+}
+
+.infos-hp {
+    text-align: center;
+}
+
+@media (max-width: 1060px) {
+    #top-bar {
+        height: auto;
+        flex-wrap: wrap;
+        padding-bottom: 10px;
+    }
+
+    #top-bar .account-infos {
+        width: 100%;
+        padding-top: 15px;
+    }
+
+    #top-bar .btns-top {
+        width: 100%;
+        padding: 0 20px;
+        flex-wrap: wrap;
+    }
+
+    #top-bar .btns-top a {
+        margin: 10px 0;
+        width: 100%;
+    }
+  }

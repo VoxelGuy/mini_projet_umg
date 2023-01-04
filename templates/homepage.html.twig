@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div id ="top-bar">
+    <div class="account-infos">
+        Vous êtes bien connecté(e) avec un compte : {% if is_granted('ROLE_ADMIN') %} Administrateur {% else %} Utilisateur {% endif %}
+    </div>
+
+
+    <div class="btns-top">
+        {% if is_granted('ROLE_ADMIN') %} <a href="/admin" class="btn-admin">Accèder au Back-office du site</a> {% endif %}
+        <a href="/deconnexion" class="btn-deco">Se déconnecter</a>
+    </div>
+</div>
+
+<div id="homepage">
+
+    <h1>Accueil</h1>
+    <div class="infos-hp"><i>Cette page Front End est uniquement visible par un utilisateur si il est connecté</i></div>
+
+    {% for contenu in contenus %}
+        <div class="un-contenu">
+            <h3>{{ contenu.Titre }}</h3>
+            <div class="description-contenu">
+                {{ contenu.description|raw }}
+            </div>
+        </div>
+    {% endfor %}
+
+</div>
+
+{% endblock %}

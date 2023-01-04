@@ -1,0 +1,39 @@
+{# templates/login/index.html.twig #}
+{% extends 'base.html.twig' %}
+
+{# ... #}
+
+{% block body %}
+
+    <div class="login-page">
+        <h1>Bienvenue sur la page de login du Mini Projet UMG</h1>
+        <strong>Connectez-vous pour continuer.</strong><br/>
+        <div class="comments">
+            <i>Si vous utilisez les identifiants "Utilisateur" vous aurez alors accès à la page des contenus</i><br/>
+            <i>Si vous utilisez les identifiants "Administrateurs" vous aurez alors accès à la page des contenus et à la page d'administration des contenus</i>
+        </div>
+
+
+        <div class="login-form">
+            <form action="{{ path('app_login') }}" method="post">
+                <div class="container-login-form">
+                    <h3>Connexion</h3>
+                    <label for="username">Nom d'utilisateur :</label>
+                    <input type="text" id="username" name="_username" value="{{ last_username }}" placeholder="Entrez votre nom d'utilisateur"/>
+
+                    <label for="password">Mot de passe :</label>
+                    <input type="password" id="password" name="_password" placeholder="Entrez votre mot de passe"/>
+
+                    <button type="submit">Se connecter</button>
+                </div>
+            </form>
+
+            <div class="error-msg">
+                {% if error %}
+                    <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}  
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
